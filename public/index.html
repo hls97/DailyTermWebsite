@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "quizApp" ng-cloak>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+  <script type="text/javascript" src="./app.js"></script>
+
+
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>DailyTerm</title>
+
+  <!-- Custom styles for this template -->
+  <link href="cover.css" rel="stylesheet">
+
+
+</head>
+
+<body >
+
+  <div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+      <div class="cover-container" ng-controller = "MainController">
+
+
+        <div class="inner cover" style = "vertical-align: top">
+          <h1 class="cover-heading">{{terms[rand].term}}</h1>
+          <div class = "inner cover" ng-repeat = "item in terms | limitTo:4 track by $index" >
+            <p style="margin-left:-7px;"> <button ng-click = "checkAnswer($index)" class="buttn"> {{letters[$index]}} </button> {{item.definition}}</p>
+          </div>
+        </div>
+        <div class="inner cover">
+          <p ng-show = "showAnswer"> {{answer}}! correct answer is: {{letters[rand]}}</p>
+        </div>
+          <div class="mastfoot">
+            <div class="inner">
+              <p>DailyTerm by Harold Shen</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  </body>
+  </html>
