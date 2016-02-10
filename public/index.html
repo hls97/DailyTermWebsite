@@ -34,11 +34,11 @@
         <div class="inner cover" style = "vertical-align: top">
           <h1 class="cover-heading">{{terms[rand].term}}</h1>
           <div class = "inner cover" ng-repeat = "item in terms | limitTo:4 track by $index" >
-            <p style="margin-left:-7px;"> <button ng-click = "checkAnswer($index)" class="buttn"> {{letters[$index]}} </button> {{item.definition}}</p>
+            <p style="margin-right:-15px;"> <button ng-click = "checkAnswer($index)" class="buttn"> {{item.definition}} </button>&nbsp</p>
           </div>
         </div>
         <div class="inner cover">
-          <p ng-show = "showAnswer"> {{answer}}! correct answer is: {{letters[rand]}}</p>
+          <p ng-show = "showAnswer"> {{answer}}! correct answer is: {{terms[rand].definition}}</p>
         </div>
           <div class="mastfoot">
             <div class="inner">
