@@ -9,8 +9,8 @@ User input:
   term.
   
 The Code:
-  The website uses the Quizlet Api as its source for terms. The terms are then processed using angular and set up in the html
-  file.
+  The website uses the Quizlet Api as its source for terms. Node.js with express is used for the server side, and Angular.js
+  is used to format and display the terms with conjuction with HTML.
   
 Limitations and Design Flaws:
   Currently, the website requires a full page refresh to load a new question. Additionally, quizlet contains sets of questions
