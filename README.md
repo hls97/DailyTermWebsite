@@ -12,6 +12,7 @@ The Code:
 Limitations and Design Flaws:
   Currently, the website requires a full page refresh to load a new question. Additionally, quizlet contains sets of questions
   with restricted access, and thus an additional refresh is required. Further development on the website should make calls to
-  API without refreshing the website.
+  API without refreshing the website. 
+  As quizlet is a public access database, many sets/terms from the API have strange text and/or improper term to    definition format. Further implementation may see checks for proper terms.
   
   Harold Shen @hlshen@ucsd.edu
