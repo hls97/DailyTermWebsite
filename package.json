@@ -2,10 +2,18 @@
   "name": "RandomQuizGenerator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Harold Shen",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "4.2.6"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "needle": "^1.0.0",
+    "path": "^0.12.7"
+  }
 }

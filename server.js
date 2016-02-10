@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 var path = require("path");
-
+var port = process.env.PORT || 8080;
 var questionBuilder = require('./public/controllers/getQuiz');
 
 //use public files
@@ -16,7 +16,9 @@ app.get('/', function(request, response){
 app.get('/getQuizlet', questionBuilder);
 
 
-app.listen(3000);
+app.listen(port,function(){
+    console.log(port);   
+});
 
 
 
