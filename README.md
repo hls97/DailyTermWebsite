@@ -4,6 +4,9 @@ Description:
   four new selections will appear. Although not following the "daily" in the title, the goal of the website is to provide
   a daily assortment of terms to test the user.
   
+User input:
+  Click on the definition you think matches the term! After clicking, the page will refresh after a few seconds with a new
+  term.
   
 The Code:
   The website uses the Quizlet Api as its source for terms. The terms are then processed using angular and set up in the html
