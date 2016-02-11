@@ -18,4 +18,5 @@ Limitations and Design Flaws:
   API without refreshing the website. 
   As quizlet is a public access database, many sets/terms from the API have strange text and/or improper term to    definition format. Further implementation may see checks for proper terms.
   
+  Link: https://dailyterm.herokuapp.com/
   Harold Shen @hlshen@ucsd.edu
