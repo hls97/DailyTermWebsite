@@ -2,7 +2,7 @@
   var app = angular.module('quizApp', []);
 
   app.controller('MainController', function($scope, $http, $location){
-        $http.get('/getQuizlet').then(
+        function get() {$http.get('/getQuizlet').then(
             function successCallback(response){
                 if(response['data'] != 'error'){
                     $scope.terms = response['data'];
@@ -12,13 +12,15 @@
                 }
                 else{
                     console.log('RELOADING');
-                    location.reload();
+                    get();
                 }
             },
             function errorCallback(response){
                 console.log('Error Callback');
                 console.log(response);
         });
+    };
+    get();
         $scope.checkAnswer = function(id){
             console.log(id);
 
@@ -34,7 +36,7 @@
             $scope.showAnswer = true;
 
             setTimeout(function() {
-                location.reload(true);
+                get();
             }, 4000);
 
         };
