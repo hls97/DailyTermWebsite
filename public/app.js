@@ -5,9 +5,9 @@
         function get() {$http.get('/getQuizlet').then(
             function successCallback(response){
                 if(response['data'] != 'error'){
-                    $scope.terms = response['data'];
-                    $scope.rand = Math.floor(Math.random() * 4);
-                    $scope.letters = ['a','b','c','d'];
+                    $scope.isDisabled = false; //for disabling buttons
+                    $scope.terms = response['data']; //to store all the terms of the set
+                    $scope.rand = Math.floor(Math.random() * 4); //to randomize the term used as answer
                     $scope.showAnswer= false;
                 }
                 else{
@@ -23,6 +23,8 @@
     get();
         $scope.checkAnswer = function(id){
             console.log(id);
+
+            $scope.isDisabled = true;
 
             //check if index passed in matches the rand selected
             if (id === $scope.rand){
